@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+    --figures-color: #d9d9d9;
+    --around-big-color: #248456;
+    --rectangle-color: #1c3f9b;
+    --around-little-color: #0da566;
+    --triangle-color: #ce3606;
+    --rectangle-rounded-color: #910fc0;
+}
+
+.figures {
+    background-color: var(--figures-color);
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.around-big, .rectangle, .around-little, .triangle, .rectangle-rounded {
+    position: absolute;
+}
+
+.around-big, .around-little {
+    border-radius: 50%;
+}
+
+.around-big {
+    background-color: var(--around-big-color);
+    top: -103px;
+    left: -94px;
+    width: 320px;
+    height: 316px;
+    z-index: 1;
+}
+
+.rectangle {
+    background-color: var(--rectangle-color);
+    top: 15px;
+    left: 189px;
+    width: 47px;
+    height: 350px;
+    -webkit-transform: rotate(-43deg);
+    -ms-transform: rotate(-43deg);
+    transform: rotate(-43deg);
+    z-index: 2;
+}
+
+.around-little {
+    background-color: var(--around-little-color);
+    top: 136px;
+    left: 225px;
+    width: 100px;
+    height: 100px;
+    z-index: 3;
+}
+
+.triangle {
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 0 108px 100px;
+    border-color: transparent transparent var(--triangle-color) transparent;
+    
+}
+
+.rectangle-rounded {
+    background-color: var(--rectangle-rounded-color);
+    bottom: 53px;
+    left: 49px;
+    width: 300px;
+    height: 80px;
+    border-radius: 30px;
+    z-index: 4;
+}
